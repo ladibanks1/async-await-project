@@ -13,7 +13,7 @@ iterateWithAsyncAwait(values);
 // Task 03: Handling Errors with Async/Await
 async function awaitCall() {
   try {
-    const response = await fetch('https://api.example.com/data'); // Replace with a real URL
+    const response = await fetch('https://mongo-crud-api-bbel.onrender.com/getAccount/7247744753'); 
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -31,8 +31,8 @@ awaitCall();
 async function concurrentRequests() {
   try {
     const [response1, response2] = await Promise.all([
-      fetch('https://api.example.com/data1'), // Replace with real URLs
-      fetch('https://api.example.com/data2')
+      fetch('https://mongo-crud-api-bbel.onrender.com/getAccount/7247744753'), 
+      fetch('https://mongo-crud-api-bbel.onrender.com/getAccount/7247744753')
     ]);
 
     if (!response1.ok || !response2.ok) {
